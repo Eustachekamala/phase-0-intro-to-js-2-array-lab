@@ -11,10 +11,9 @@ function destructivelyPrependCat(name){
 }
 destructivelyPrependCat('Bob');
 
-function destructiveRemoveLastCat(){
+function destructivelyRemoveLastCat(){
    return cats.pop();
 }
-destructiveRemoveLastCat();
 
 function destructivelyRemoveFirstCat(){
     return cats.shift();
@@ -30,12 +29,15 @@ function prependCat(){
 }
 
 function removeLastCat(){
-    [...cats,cats.pop()];
-    console.log(cats);
+    let catRm = [...cats];
+    catRm.pop();
+    return catRm;
 }
 
 function removeFirstCat(){
-    [...cats,cats.shift()];
-    console.log(cats);
+    let catRm = [...cats];
+    catRm.shift();
+    return catRm;
 }
 
+destructivelyRemoveLastCat();
